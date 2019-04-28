@@ -13,7 +13,7 @@ export function oktaCognitoClientGenerator(_occConfig: OCCBaseConfig) {
 
 	instance.interceptors.request.use(
 		async config => {
-			config.headers.common.Authorization = getIdToken(occConfig)
+			config.headers.common.Authorization = await getIdToken(occConfig)
 			return config
 		},
 		error => {
