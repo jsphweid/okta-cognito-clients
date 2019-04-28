@@ -23,7 +23,7 @@ export function oktaCognitoGraphqlClientGenerator(
 
 	const middlewareContext = setContext(async () => {
 		const token = await getIdToken(occConfig)
-		return token
+		return { token }
 	})
 
 	const middlewareLink = new ApolloLink((operation, forward) => {
