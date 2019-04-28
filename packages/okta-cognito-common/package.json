@@ -1,0 +1,24 @@
+{
+	"version": "0.0.1",
+	"name": "okta-cognito-common",
+	"scripts": {
+		"prepare": "npm run build",
+		"prebuild": "npm run clean",
+		"build": "tsc -b .",
+		"postbuild": "npm run bundle",
+		"bundle": "../../node_modules/rollup/bin/rollup -c rollup.config.js",
+		"watch": "../../node_modules/tsc-watch/index.js --onSuccess \"npm run postbuild\"",
+		"clean": "rm -rf lib/*",
+		"prepublishOnly": "npm run clean && npm run build"
+	},
+	"main": "./lib/bundle.cjs.js",
+	"module": "./lib/bundle.esm.js",
+	"typings": "./lib/index.d.ts",
+	"devDependencies": {
+		"@types/jwt-decode": "^2.2.1"
+	},
+	"dependencies": {
+		"axios": "^0.18.0",
+		"jwt-decode": "^2.2.0"
+	}
+}

@@ -1,0 +1,13 @@
+node_modules
+
+.dist
+.build
+.cache
+.serverless
+.tst
+.vscode
+.DS_STORE
+lib
+dist
+*.tgz
+.rpt2_cache

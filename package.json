@@ -1,0 +1,33 @@
+{
+	"name": "okta-cognito-clients",
+	"private": true,
+	"description": "GraphQL and REST clients for easily integrating Okta and Cognito in javascript.",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Joseph Weidinger",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "^23.3.14",
+		"@types/node": "^10.14.6",
+		"jest": "^23.6.0",
+		"lerna": "^3.13.4",
+		"nodemon": "^1.18.11",
+		"rollup": "1.10.1",
+		"rollup-plugin-commonjs": "^9.3.4",
+		"rollup-plugin-invariant": "0.5.3",
+		"rollup-plugin-json": "^3.1.0",
+		"rollup-plugin-local-resolve": "1.0.7",
+		"rollup-plugin-node-resolve": "4.2.3",
+		"rollup-plugin-sourcemaps": "0.4.2",
+		"rollup-plugin-terser": "4.0.4",
+		"rollup-plugin-typescript2": "^0.21.0",
+		"ts-jest": "^23.10.5",
+		"ts-node": "^7.0.1",
+		"tsconfig-paths": "^3.8.0",
+		"tslint": "^5.16.0",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.4.5",
+		"typescript-tooling": "^4.1.0"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"extends": "./.tst/tsconfig.json",
+	"compilerOptions": {
+		"lib": ["dom"],
+		"outDir": "lib",
+		"declaration": true,
+		"module": "es2015"
+	}
+}
