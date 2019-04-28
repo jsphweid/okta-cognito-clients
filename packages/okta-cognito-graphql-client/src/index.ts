@@ -5,6 +5,7 @@ import { setContext } from 'apollo-link-context'
 import { HttpLink } from 'apollo-link-http'
 import fetch from 'isomorphic-fetch'
 import {
+	generateAndSetAllTokensFromCode,
 	getIdToken,
 	makeConfigWithDefaults,
 	OCCBaseConfig
@@ -47,8 +48,14 @@ export function oktaCognitoGraphqlClientGenerator(
 	const links = [middlewareContext, middlewareLink, httpLink]
 	const link = ApolloLink.from(links)
 
-	return new ApolloClient({
+	const instance = new ApolloClient({
 		link,
 		cache
 	})
+
+	return {
+		...instance,
+		setTokens: (code: string) =>
+			generateAndSetAllTokensFromCode(occConfig, code)
+	}
 }
