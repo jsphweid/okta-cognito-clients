@@ -15,8 +15,8 @@ The respective packages above both provide a function that generates clients.
 With some basic config passed in, these clients can:
 
 - [x] attach idTokens to all requests
-- [x] handle the fetching of new idTokens when only a refreshToken is valid
-- [x] handle storing tokens in localStorage (but can be overridden)
+- [x] fetch new idTokens when only a refreshToken is valid
+- [x] store and retrieve tokens in localStorage (but can be overridden)
 - [ ] handle entire auth flow automatically (but it provides a convenience function for that)
 - [ ] handle when idToken and refreshToken are both invalid
 
