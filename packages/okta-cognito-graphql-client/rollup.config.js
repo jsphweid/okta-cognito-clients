@@ -1,7 +1,7 @@
 import { rollup } from '../../rollup.config'
 
 export default rollup({
-	name: 'okta-cognito-graphql-client'
+	name: 'okta-cognito-graphql-client',
 	extraGlobals: {
 		axios: 'axios',
 		'jwt-decode': 'jwtDecode',
