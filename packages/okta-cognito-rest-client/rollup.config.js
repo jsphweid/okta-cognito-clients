@@ -4,6 +4,6 @@ export default rollup({
 	name: 'okta-cognito-rest-client',
 	extraGlobals: {
 		axios: 'axios',
-		'jwt-decode': 'jwtDecode'
+		'okta-cognito-common': 'okta-cognito-common'
 	}
 })
