@@ -1,5 +1,5 @@
 {
-	"version": "0.0.2-alpha.5",
+	"version": "0.0.2-alpha.6",
 	"name": "okta-cognito-rest-client",
 	"main": "./lib/bundle.cjs.js",
 	"module": "./lib/bundle.esm.js",
