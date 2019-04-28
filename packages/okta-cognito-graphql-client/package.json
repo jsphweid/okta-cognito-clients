@@ -1,5 +1,5 @@
 {
-	"version": "0.0.1",
+	"version": "0.0.2-alpha.0",
 	"name": "okta-cognito-graphql-client",
 	"main": "./lib/bundle.cjs.js",
 	"module": "./lib/bundle.esm.js",
@@ -21,7 +21,7 @@
 		"apollo-link": "^1.2.11",
 		"apollo-link-context": "^1.0.17",
 		"apollo-link-http": "^1.5.14",
-		"okta-cognito-common": "file:../okta-cognito-common",
-		"isomorphic-fetch": "^2.2.1"
+		"isomorphic-fetch": "^2.2.1",
+		"okta-cognito-common": "file:../okta-cognito-common"
 	}
 }
