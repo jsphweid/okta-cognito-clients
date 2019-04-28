@@ -6,7 +6,7 @@ import {
 	OCCBaseConfig
 } from 'okta-cognito-common'
 
-export function oktaCognitoClientGenerator(_occConfig: OCCBaseConfig) {
+export function oktaCognitoRestClientGenerator(_occConfig: OCCBaseConfig) {
 	const occConfig = makeConfigWithDefaults(_occConfig)
 
 	const instance = axios.create()
