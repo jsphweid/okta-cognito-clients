@@ -1,4 +1,4 @@
-import { InMemoryCache } from 'apollo-cache-inmemory'
+import { InMemoryCache, NormalizedCacheObject } from 'apollo-cache-inmemory'
 import ApolloClient from 'apollo-client'
 import { ApolloLink } from 'apollo-link'
 import { setContext } from 'apollo-link-context'
@@ -15,6 +15,10 @@ const cache = new InMemoryCache()
 
 interface OCCGraphqlConfig extends OCCBaseConfig {
 	graphqlBaseUrl: string
+}
+
+interface ExtendedApolloClient extends ApolloClient<NormalizedCacheObject> {
+	setTokens: (code: string) => Promise<void>
 }
 
 export function oktaCognitoGraphqlClientGenerator(
@@ -57,5 +61,5 @@ export function oktaCognitoGraphqlClientGenerator(
 		...instance,
 		setTokens: (code: string) =>
 			generateAndSetAllTokensFromCode(occConfig, code)
-	}
+	} as ExtendedApolloClient
 }
