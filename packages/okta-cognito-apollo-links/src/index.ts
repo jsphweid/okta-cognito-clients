@@ -7,7 +7,7 @@ import {
 	OCCBaseConfig
 } from 'okta-cognito-common'
 
-export function oktaCognitoGraphqlClientGenerator(_occConfig: OCCBaseConfig) {
+export function oktaCognitoApolloLinksGenerator(_occConfig: OCCBaseConfig) {
 	const occConfig = makeConfigWithDefaults(_occConfig)
 
 	const middlewareContext = setContext(async () => {
