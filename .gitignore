@@ -11,3 +11,4 @@ lib
 dist
 *.tgz
 .rpt2_cache
+*.log
