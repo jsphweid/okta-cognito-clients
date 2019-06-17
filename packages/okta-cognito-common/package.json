@@ -1,5 +1,5 @@
 {
-	"version": "1.1.0",
+	"version": "1.1.1-alpha.10+8f4627b",
 	"name": "okta-cognito-common",
 	"scripts": {
 		"prepare": "npm run build",
@@ -20,5 +20,6 @@
 	"dependencies": {
 		"axios": "^0.18.0",
 		"jwt-decode": "^2.2.0"
-	}
+	},
+	"gitHead": "8f4627bde95d79fd0807e618cf967cbae6650cc5"
 }
