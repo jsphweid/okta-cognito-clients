@@ -1,5 +1,5 @@
 {
-	"version": "1.1.1",
+	"version": "1.1.2-alpha.5+8f4627b",
 	"name": "okta-cognito-rest-client",
 	"main": "./lib/bundle.cjs.js",
 	"module": "./lib/bundle.esm.js",
@@ -16,6 +16,7 @@
 	},
 	"dependencies": {
 		"axios": "^0.18.0",
-		"okta-cognito-common": "file:../okta-cognito-common"
-	}
+		"okta-cognito-common": "^1.1.1-alpha.10+8f4627b"
+	},
+	"gitHead": "8f4627bde95d79fd0807e618cf967cbae6650cc5"
 }

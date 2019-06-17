@@ -7,7 +7,6 @@ const refreshTokenCacheKey = 'occ_refresh_token'
 export interface OCCBaseConfig {
 	awsConfig: {
 		cognitoClientId: string
-		cognitoClientSecret: string
 		cognitoBaseUrl: string
 		redirectUrl: string
 	}
@@ -60,13 +59,9 @@ export async function getIdToken(config: FinalOCCBaseConfig): Promise<string> {
 export const tokenIsExpired = (idToken: string) =>
 	(jwtDecode(idToken) as any).exp * 1000 < new Date().getTime()
 
-function makeCognitoHeaders(config: OCCBaseConfig) {
-	const { cognitoClientId, cognitoClientSecret } = config.awsConfig
+function makeCognitoHeaders() {
 	return {
 		headers: {
-			Authorization: `Basic ${window.btoa(
-				`${cognitoClientId}:${cognitoClientSecret}`
-			)}`,
 			'Content-Type': 'application/x-www-form-urlencoded'
 		}
 	}
@@ -76,12 +71,11 @@ export function fetchNewIdToken(config: FinalOCCBaseConfig): Promise<string> {
 	const { cognitoClientId, cognitoBaseUrl, redirectUrl } = config.awsConfig
 	const { getRememberedRefreshToken } = config.memory
 
-	const options = makeCognitoHeaders(config)
 	return axios
 		.post(
 			`${cognitoBaseUrl}/oauth2/token?grant_type=refresh_token&client_id=${cognitoClientId}&refresh_token=${getRememberedRefreshToken()}&redirect_uri=${redirectUrl}`,
 			{},
-			options
+			makeCognitoHeaders()
 		)
 		.then(res => res.data.id_token)
 		.catch(err => {
@@ -95,12 +89,11 @@ export async function generateAndSetAllTokensFromCode(
 	code: string
 ): Promise<void> {
 	const { cognitoClientId, cognitoBaseUrl, redirectUrl } = config.awsConfig
-	const options = makeCognitoHeaders(config)
 	return axios
 		.post(
 			`${cognitoBaseUrl}/oauth2/token?grant_type=authorization_code&client_id=${cognitoClientId}&code=${code}&redirect_uri=${redirectUrl}`,
 			{},
-			options
+			makeCognitoHeaders()
 		)
 		.then(res => {
 			config.memory.setIdTokenInMemory(res.data.id_token)

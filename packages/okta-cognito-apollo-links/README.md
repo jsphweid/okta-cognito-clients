@@ -16,7 +16,6 @@ import fetch from 'isomorphic-fetch' // for example
 const { links, setToken } = oktaCognitoApolloLinksGenerator({
 	awsConfig: {
 		cognitoClientId: '123',
-		cognitoClientSecret: 'abc123',
 		cognitoBaseUrl: 'https://my-cognito.auth.us-east-1.amazoncognito.com',
 		redirectUrl: `https://my-base-app-url.com`
 	}
