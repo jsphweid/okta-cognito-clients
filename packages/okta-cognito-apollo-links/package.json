@@ -1,5 +1,5 @@
 {
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"name": "okta-cognito-apollo-links",
 	"scripts": {
 		"prepare": "npm run build",
@@ -20,7 +20,7 @@
 	"dependencies": {
 		"apollo-link": "^1.2.11",
 		"apollo-link-context": "^1.0.17",
-		"okta-cognito-common": "^2.0.0"
+		"okta-cognito-common": "^2.0.1"
 	},
 	"gitHead": "8f4627bde95d79fd0807e618cf967cbae6650cc5"
 }
