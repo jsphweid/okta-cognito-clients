@@ -15,7 +15,6 @@ import { oktaCognitoRestClientGenerator } from 'okta-cognito-rest-client'
 const client = oktaCognitoRestClientGenerator({
 	awsConfig: {
 		cognitoClientId: '123',
-		cognitoClientSecret: 'abc123',
 		cognitoBaseUrl: 'https://my-cognito.auth.us-east-1.amazoncognito.com',
 		redirectUrl: `https://my-base-app-url.com`
 	}

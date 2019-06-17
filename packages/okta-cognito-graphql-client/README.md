@@ -16,7 +16,6 @@ const client = oktaCognitoGraphqlClientGenerator({
 	graphqlBaseUrl: 'https://mygraphqlendpoint.com/graphql',
 	awsConfig: {
 		cognitoClientId: '123',
-		cognitoClientSecret: 'abc123',
 		cognitoBaseUrl: 'https://my-cognito.auth.us-east-1.amazoncognito.com',
 		redirectUrl: `https://my-base-app-url.com`
 	}

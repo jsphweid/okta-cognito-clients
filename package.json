@@ -2,9 +2,6 @@
 	"name": "okta-cognito-clients",
 	"private": true,
 	"description": "GraphQL and REST clients for easily integrating Okta and Cognito in javascript.",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
 	"author": "Joseph Weidinger",
 	"license": "MIT",
 	"devDependencies": {
