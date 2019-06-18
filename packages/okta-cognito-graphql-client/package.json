@@ -24,7 +24,7 @@
 		"apollo-link-context": "^1.0.17",
 		"apollo-link-http": "^1.5.14",
 		"isomorphic-fetch": "^2.2.1",
-		"okta-cognito-common": "^2.0.2"
+		"okta-cognito-common": "file:../okta-cognito-common"
 	},
 	"gitHead": "8f4627bde95d79fd0807e618cf967cbae6650cc5"
 }
